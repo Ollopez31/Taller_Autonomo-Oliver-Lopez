@@ -56,18 +56,16 @@ for L in longitudes:
 
 import matplotlib.pyplot as plt
 
-# Aquí pegas los resultados que salieron en la terminal del primer código
 longitudes = [1, 2, 3, 4] 
-tiempos = [0.0001, 0.0025, 0.0650, 1.6800] # Ejemplo de lo que te salga en la terminal
+tiempos = [0.0001, 0.0025, 0.0650, 1.6800]
 
-# --- PLANO CARTESIANO ---
+
 plt.figure(figsize=(8, 5))
 
-# TENDENCIA ALCISTA (Tiempo aumenta con la longitud)
+
 plt.plot(longitudes, tiempos, marker='o', color='cyan', label='Tendencia Alcista (Tiempo)')
 
-# TENDENCIA BAJISTA (Conceptualmente: si achicamos el alfabeto, los puntos bajarían)
-# Agregamos una línea punteada para mostrar la diferencia
+
 tiempos_bajos = [t * 0.1 for t in tiempos] 
 plt.plot(longitudes, tiempos_bajos, linestyle='--', color='orange', label='Tendencia Bajista (Menos caracteres)')
 
